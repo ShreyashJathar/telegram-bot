@@ -1,0 +1,11 @@
+# Database files
+*.db
+*.db-journal
+*.db-wal
+
+# Python environment & cache
+__pycache__/
+*.pyc
+venv/
+.venv/
+.env
