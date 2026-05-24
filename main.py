@@ -18,7 +18,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger("bot")
 
-async def on_startup(dispatcher: Dispatcher, bot: Bot, db: Database):
+async def on_startup(bot: Bot, db: Database):
     logger.info("Initializing database...")
     await db.connect()
     logger.info("Database initialized successfully.")
@@ -49,7 +49,7 @@ async def main():
     dp.include_router(search.router) # General text search router should be last
     
     # Register startup hooks
-    dp.startup.register(lambda dp_instance, bot_instance: on_startup(dp_instance, bot_instance, db))
+    dp.startup.register(on_startup)
 
     try:
         # Start bot polling
