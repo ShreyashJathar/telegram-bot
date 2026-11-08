@@ -1,27 +1,45 @@
 /* ==========================================================================
-   SAFAR TRAVEL PLATFORM - TRIP.COM TRANSFORMATION DESIGN SYSTEM
+   SAFAR TRAVEL PLATFORM - LIQUID GLASS & FLUID ANIMATION DESIGN SYSTEM
    ========================================================================== */
 
-/* Header & Top Bar Navigation - Glossy Glassmorphic */
+/* Ambient Liquid Mesh Gradient Canvas */
+body {
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.08) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.08) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(0, 223, 137, 0.05) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, rgba(37, 99, 235, 0.08) 0px, transparent 50%) !important;
+  background-attachment: fixed !important;
+}
+
+[data-theme="dark"] body {
+  background-image: 
+    radial-gradient(at 5% 10%, rgba(37, 99, 235, 0.18) 0px, transparent 55%),
+    radial-gradient(at 95% 15%, rgba(147, 51, 234, 0.16) 0px, transparent 55%),
+    radial-gradient(at 50% 60%, rgba(0, 223, 137, 0.1) 0px, transparent 50%),
+    radial-gradient(at 85% 90%, rgba(56, 189, 248, 0.14) 0px, transparent 50%) !important;
+}
+
+/* Header & Top Bar Navigation - Ultra Liquid Glass */
 .main-header.trip-top-header {
   position: sticky !important;
   top: 0 !important;
   left: 0 !important;
   right: 0 !important;
-  height: 68px !important;
-  background: rgba(255, 255, 255, 0.8) !important;
-  backdrop-filter: blur(20px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-  border-bottom: 1px solid rgba(226, 232, 240, 0.7) !important;
+  height: 70px !important;
+  background: rgba(255, 255, 255, 0.72) !important;
+  backdrop-filter: blur(28px) saturate(210%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(210%) !important;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.8) !important;
   z-index: 1000 !important;
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04), inset 0 -1px 0 rgba(255, 255, 255, 0.6) !important;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05), inset 0 1.5px 1.5px rgba(255, 255, 255, 0.95), inset 0 -1px 0 rgba(226, 232, 240, 0.5) !important;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 [data-theme="dark"] .main-header.trip-top-header {
-  background: rgba(17, 24, 39, 0.8) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-  box-shadow: 0 4px 25px -2px rgba(0, 0, 0, 0.4), inset 0 -1px 0 rgba(255, 255, 255, 0.05) !important;
+  background: rgba(15, 20, 32, 0.72) !important;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.6), inset 0 1.5px 1.5px rgba(255, 255, 255, 0.12) !important;
 }
 
 .trip-top-header .header-container {
@@ -46,42 +64,42 @@
   align-items: center !important;
   gap: 8px !important;
   cursor: pointer !important;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
 }
 
 .header-left-cluster .logo-section:hover {
-  transform: scale(1.04) !important;
+  transform: scale(1.06) !important;
 }
 
 .header-quick-nav {
   display: flex !important;
   align-items: center !important;
-  gap: 6px !important;
+  gap: 8px !important;
 }
 
 .quick-nav-pill {
-  padding: 6px 14px !important;
-  border-radius: 20px !important;
+  padding: 7px 16px !important;
+  border-radius: 30px !important;
   font-size: 0.9rem !important;
   font-weight: 600 !important;
   color: var(--text-secondary, #64748b) !important;
   background: transparent !important;
   border: 1px solid transparent !important;
   cursor: pointer !important;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
 }
 
 .quick-nav-pill:hover {
   color: #2563eb !important;
-  background: rgba(37, 99, 235, 0.08) !important;
-  transform: translateY(-1px) !important;
+  background: rgba(37, 99, 235, 0.09) !important;
+  transform: translateY(-2px) scale(1.03) !important;
 }
 
 .quick-nav-pill.active {
   color: #2563eb !important;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.14) 0%, rgba(37, 99, 235, 0.06) 100%) !important;
-  border-color: rgba(37, 99, 235, 0.25) !important;
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.12) !important;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.16) 0%, rgba(56, 189, 248, 0.08) 100%) !important;
+  border: 1px solid rgba(56, 189, 248, 0.35) !important;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.15), inset 0 1.5px 1px rgba(255, 255, 255, 0.9) !important;
 }
 
 .trip-header-actions {
@@ -224,27 +242,30 @@
   min-height: calc(100vh - 68px) !important;
 }
 
-/* Left Vertical Navigation Sidebar - Glossy Glassmorphism */
+/* Left Vertical Navigation Sidebar - Liquid Floating Glass Dock */
 .trip-sidebar {
-  width: 220px !important;
-  min-width: 220px !important;
+  width: 232px !important;
+  min-width: 232px !important;
   flex-shrink: 0 !important;
-  background: rgba(255, 255, 255, 0.72) !important;
-  backdrop-filter: blur(16px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
-  border-right: 1px solid rgba(226, 232, 240, 0.75) !important;
-  padding: 18px 12px !important;
-  transition: all 0.3s ease !important;
+  background: rgba(255, 255, 255, 0.62) !important;
+  backdrop-filter: blur(28px) saturate(210%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(210%) !important;
+  border-right: 1.5px solid rgba(255, 255, 255, 0.85) !important;
+  border-radius: 0 24px 24px 0 !important;
+  box-shadow: 10px 0 35px -10px rgba(0, 0, 0, 0.05), inset 0 1.5px 1.5px rgba(255, 255, 255, 0.95) !important;
+  padding: 22px 14px !important;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 [data-theme="dark"] .trip-sidebar {
-  background: rgba(17, 24, 39, 0.72) !important;
-  border-right-color: rgba(255, 255, 255, 0.08) !important;
+  background: rgba(15, 23, 42, 0.68) !important;
+  border-right: 1.5px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 10px 0 40px -10px rgba(0, 0, 0, 0.6), inset 0 1.5px 1.5px rgba(255, 255, 255, 0.08) !important;
 }
 
 .trip-sidebar-inner {
   position: sticky !important;
-  top: 84px !important;
+  top: 86px !important;
 }
 
 .trip-nav-list {
@@ -253,7 +274,7 @@
   margin: 0 !important;
   display: flex !important;
   flex-direction: column !important;
-  gap: 6px !important;
+  gap: 8px !important;
 }
 
 .trip-nav-item {
@@ -265,51 +286,57 @@
   display: flex !important;
   align-items: center !important;
   gap: 12px !important;
-  padding: 10px 14px !important;
-  border-radius: 12px !important;
+  padding: 11px 16px !important;
+  border-radius: 14px !important;
   background: transparent !important;
   border: 1px solid transparent !important;
   font-size: 0.92rem !important;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
   color: var(--text-primary, #334155) !important;
   cursor: pointer !important;
   text-align: left !important;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
   position: relative !important;
   overflow: hidden !important;
 }
 
 .trip-nav-btn:hover {
-  background: rgba(37, 99, 235, 0.08) !important;
+  background: rgba(37, 99, 235, 0.09) !important;
   color: #2563eb !important;
-  transform: translateX(4px) !important;
-  border-color: rgba(37, 99, 235, 0.15) !important;
+  transform: translateX(6px) scale(1.025) !important;
+  border-color: rgba(56, 189, 248, 0.3) !important;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.12), inset 0 1px 1px rgba(255, 255, 255, 0.9) !important;
 }
 
 .trip-nav-btn.active {
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.14) 0%, rgba(59, 130, 246, 0.06) 100%) !important;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.18) 0%, rgba(56, 189, 248, 0.12) 100%) !important;
   color: #2563eb !important;
   font-weight: 700 !important;
-  border-color: rgba(37, 99, 235, 0.25) !important;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.8) !important;
+  border: 1.5px solid rgba(56, 189, 248, 0.45) !important;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.18), inset 0 1.5px 1.5px rgba(255, 255, 255, 0.95) !important;
 }
 
 .trip-nav-btn.active::before {
   content: "" !important;
   position: absolute !important;
   left: 0 !important;
-  top: 8px !important;
-  bottom: 8px !important;
+  top: 6px !important;
+  bottom: 6px !important;
   width: 4px !important;
-  background: linear-gradient(180deg, #3b82f6 0%, #2563eb 100%) !important;
+  background: linear-gradient(180deg, #38bdf8 0%, #2563eb 100%) !important;
   border-radius: 0 4px 4px 0 !important;
-  box-shadow: 0 0 8px rgba(37, 99, 235, 0.5) !important;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.8) !important;
 }
 
 .trip-nav-icon {
   font-size: 1.15rem !important;
   width: 24px !important;
   text-align: center !important;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.trip-nav-btn:hover .trip-nav-icon {
+  transform: scale(1.18) rotate(3deg) !important;
 }
 
 .trip-nav-label {
@@ -317,13 +344,15 @@
 }
 
 .trip-new-badge {
-  background: #ef4444 !important;
+  background: linear-gradient(135deg, #ef4444 0%, #f43f5e 100%) !important;
   color: #ffffff !important;
   font-size: 0.65rem !important;
   font-weight: 800 !important;
-  padding: 2px 6px !important;
-  border-radius: 4px !important;
+  padding: 3px 7px !important;
+  border-radius: 6px !important;
   text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  box-shadow: 0 2px 6px rgba(239, 68, 68, 0.35) !important;
 }
 
 /* Main Content Area */
@@ -334,25 +363,24 @@
 }
 
 /* ==========================================================================
-   TRIP.COM ROYAL BLUE HERO & SEARCH CONSOLE
+   LIQUID SAPPHIRE HERO & LIQUID GLASS SEARCH CONSOLE
    ========================================================================== */
 
 .trip-hero-section {
   position: relative !important;
-  background-color: #0052d4 !important;
-  background-image: 
-    linear-gradient(90deg, rgba(2, 69, 181, 0.96) 0%, rgba(30, 64, 175, 0.92) 40%, rgba(37, 99, 235, 0.8) 65%, rgba(37, 99, 235, 0.35) 85%, rgba(37, 99, 235, 0.18) 100%),
+  background: 
+    linear-gradient(135deg, rgba(2, 69, 181, 0.92) 0%, rgba(30, 64, 175, 0.88) 35%, rgba(14, 165, 233, 0.8) 70%, rgba(0, 223, 137, 0.72) 100%),
     url('/assets/trip_hero_resort.jpg'),
     url('/assets/travel_hero.png') !important;
   background-size: cover !important;
   background-position: center right !important;
   background-repeat: no-repeat !important;
-  border-radius: 24px !important;
-  padding: 38px 40px 48px !important;
+  border-radius: 28px !important;
+  padding: 42px 44px 50px !important;
   color: #ffffff !important;
-  margin-bottom: 32px !important;
-  box-shadow: 0 20px 45px -10px rgba(2, 69, 181, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.45) !important;
-  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  margin-bottom: 34px !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 25px 65px -12px rgba(2, 69, 181, 0.45), inset 0 1.5px 2px rgba(255, 255, 255, 0.65) !important;
   overflow: hidden !important;
 }
 
@@ -361,20 +389,32 @@
   position: absolute !important;
   top: -40% !important;
   right: -15% !important;
-  width: 500px !important;
-  height: 500px !important;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 65%) !important;
+  width: 520px !important;
+  height: 520px !important;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.28) 0%, rgba(56, 189, 248, 0.15) 45%, transparent 70%) !important;
   pointer-events: none !important;
   animation: floatSlow 10s ease-in-out infinite alternate !important;
 }
 
+.trip-hero-section::after {
+  content: "" !important;
+  position: absolute !important;
+  bottom: -35% !important;
+  left: 20% !important;
+  width: 440px !important;
+  height: 440px !important;
+  background: radial-gradient(circle, rgba(0, 223, 137, 0.18) 0%, transparent 65%) !important;
+  pointer-events: none !important;
+  animation: floatSlow 12s ease-in-out infinite alternate-reverse !important;
+}
+
 .trip-hero-headline {
-  font-size: 2.3rem !important;
+  font-size: 2.35rem !important;
   font-weight: 800 !important;
   margin: 0 0 12px 0 !important;
   letter-spacing: -0.6px !important;
   color: #ffffff !important;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.18) !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.25) !important;
   position: relative !important;
   z-index: 1 !important;
 }
@@ -396,25 +436,25 @@
   opacity: 0.6 !important;
 }
 
-/* Floating White Search Box Card - Glossy Crystal Glass */
+/* Floating White Search Box Card - Liquid VisionOS Glass Card */
 .trip-search-box-card {
   position: relative !important;
-  background: rgba(255, 255, 255, 0.94) !important;
-  backdrop-filter: blur(24px) saturate(190%) !important;
-  -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(32px) saturate(220%) !important;
+  -webkit-backdrop-filter: blur(32px) saturate(220%) !important;
   color: #0f172a !important;
-  border-radius: 20px !important;
-  box-shadow: 0 22px 55px -10px rgba(15, 23, 42, 0.28), inset 0 1px 1px 0 rgba(255, 255, 255, 1) !important;
-  padding: 22px 26px 18px !important;
-  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 25px 60px -10px rgba(15, 23, 42, 0.28), inset 0 1.5px 2px rgba(255, 255, 255, 1) !important;
+  padding: 24px 28px 20px !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
   z-index: 2 !important;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 [data-theme="dark"] .trip-search-box-card {
-  background: rgba(21, 25, 35, 0.9) !important;
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
-  box-shadow: 0 24px 60px -10px rgba(0, 0, 0, 0.6), inset 0 1px 1px 0 rgba(255, 255, 255, 0.1) !important;
+  background: rgba(17, 24, 39, 0.8) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 25px 65px -10px rgba(0, 0, 0, 0.7), inset 0 1.5px 2px rgba(255, 255, 255, 0.1) !important;
   color: #f8fafc !important;
 }
 
@@ -422,9 +462,9 @@
   display: flex !important;
   align-items: center !important;
   gap: 10px !important;
-  border-bottom: 1px solid rgba(226, 232, 240, 0.8) !important;
+  border-bottom: 1.5px solid rgba(226, 232, 240, 0.7) !important;
   padding-bottom: 14px !important;
-  margin-bottom: 18px !important;
+  margin-bottom: 20px !important;
   overflow-x: auto !important;
 }
 
@@ -437,29 +477,29 @@
   align-items: center !important;
   gap: 8px !important;
   background: transparent !important;
-  border: 1px solid transparent !important;
-  padding: 8px 18px !important;
+  border: 1.5px solid transparent !important;
+  padding: 9px 18px !important;
   font-size: 0.95rem !important;
   font-weight: 600 !important;
   color: #475569 !important;
   cursor: pointer !important;
-  border-radius: 12px !important;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  border-radius: 14px !important;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
   white-space: nowrap !important;
   position: relative !important;
 }
 
 .trip-tab-btn:hover {
-  background: rgba(37, 99, 235, 0.08) !important;
+  background: rgba(37, 99, 235, 0.09) !important;
   color: #2563eb !important;
-  transform: translateY(-1px) !important;
+  transform: translateY(-2px) scale(1.02) !important;
 }
 
 .trip-tab-btn.active {
   color: #2563eb !important;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.12) 0%, rgba(59, 130, 246, 0.06) 100%) !important;
-  border-color: rgba(37, 99, 235, 0.3) !important;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.12), inset 0 1px 1px rgba(255, 255, 255, 0.8) !important;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.16) 0%, rgba(56, 189, 248, 0.1) 100%) !important;
+  border-color: rgba(56, 189, 248, 0.45) !important;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.15), inset 0 1.5px 1px rgba(255, 255, 255, 0.95) !important;
 }
 
 [data-theme="dark"] .trip-tab-btn {
@@ -468,25 +508,25 @@
 
 [data-theme="dark"] .trip-tab-btn.active {
   color: #60a5fa !important;
-  background: rgba(59, 130, 246, 0.18) !important;
-  border-color: rgba(59, 130, 246, 0.4) !important;
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.1) !important;
+  background: rgba(59, 130, 246, 0.22) !important;
+  border-color: rgba(59, 130, 246, 0.5) !important;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.15) !important;
 }
 
 .trip-search-inputs-row {
   display: flex !important;
   align-items: center !important;
-  gap: 10px !important;
-  background: rgba(241, 245, 249, 0.8) !important;
-  backdrop-filter: blur(8px) !important;
+  gap: 12px !important;
+  background: rgba(241, 245, 249, 0.75) !important;
+  backdrop-filter: blur(14px) !important;
   padding: 10px !important;
-  border-radius: 14px !important;
-  border: 1px solid rgba(226, 232, 240, 0.85) !important;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02) !important;
+  border-radius: 18px !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.85) !important;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.03) !important;
 }
 
 [data-theme="dark"] .trip-search-inputs-row {
-  background: rgba(15, 23, 42, 0.6) !important;
+  background: rgba(15, 23, 42, 0.65) !important;
   border-color: rgba(255, 255, 255, 0.08) !important;
 }
 
@@ -494,28 +534,29 @@
   flex: 1 !important;
   display: flex !important;
   flex-direction: column !important;
-  padding: 10px 14px !important;
-  background: rgba(255, 255, 255, 0.95) !important;
-  border-radius: 10px !important;
-  border: 1px solid rgba(203, 213, 225, 0.8) !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02) !important;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  padding: 10px 16px !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(16px) !important;
+  border-radius: 14px !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.03), inset 0 1px 1px rgba(255, 255, 255, 0.95) !important;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
 }
 
 [data-theme="dark"] .search-input-unit {
-  background: rgba(30, 41, 59, 0.7) !important;
+  background: rgba(30, 41, 59, 0.75) !important;
   border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 .search-input-unit:hover {
   border-color: #93c5fd !important;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08) !important;
-  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.1) !important;
+  transform: translateY(-1.5px) !important;
 }
 
 .search-input-unit:focus-within {
-  border-color: #2563eb !important;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2), 0 6px 16px rgba(37, 99, 235, 0.1) !important;
+  border-color: #38bdf8 !important;
+  box-shadow: 0 0 0 3.5px rgba(56, 189, 248, 0.28), 0 8px 24px rgba(37, 99, 235, 0.15) !important;
   transform: translateY(-2px) !important;
 }
 
@@ -556,25 +597,27 @@
   color: #f8fafc !important;
 }
 
-/* Glossy Action Button with Specular Sheen Animation */
+/* Liquid Gel Search Action Button with Specular Wave */
 .trip-search-action-btn {
   position: relative !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   gap: 8px !important;
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%) !important;
+  background: linear-gradient(135deg, #38bdf8 0%, #2563eb 50%, #1d4ed8 100%) !important;
+  background-size: 200% 200% !important;
   color: #ffffff !important;
-  border: 1px solid rgba(255, 255, 255, 0.35) !important;
-  border-radius: 12px !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.5) !important;
+  border-radius: 16px !important;
   padding: 16px 36px !important;
   font-size: 1.05rem !important;
   font-weight: 700 !important;
   cursor: pointer !important;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  box-shadow: 0 8px 24px -4px rgba(37, 99, 235, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.45) !important;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  box-shadow: 0 10px 28px -4px rgba(37, 99, 235, 0.55), inset 0 1.5px 2px rgba(255, 255, 255, 0.6) !important;
   flex-shrink: 0 !important;
   overflow: hidden !important;
+  animation: liquidWave 8s ease infinite !important;
 }
 
 .trip-search-action-btn::after {
@@ -584,15 +627,15 @@
   left: -75% !important;
   width: 50% !important;
   height: 200% !important;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent) !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent) !important;
   transform: rotate(25deg) !important;
   transition: all 0.75s ease !important;
 }
 
 .trip-search-action-btn:hover {
   background: linear-gradient(135deg, #60a5fa 0%, #2563eb 50%, #1e40af 100%) !important;
-  transform: translateY(-2px) scale(1.02) !important;
-  box-shadow: 0 14px 32px -4px rgba(37, 99, 235, 0.65), inset 0 1px 2px rgba(255, 255, 255, 0.6) !important;
+  transform: translateY(-3px) scale(1.03) !important;
+  box-shadow: 0 16px 36px -4px rgba(37, 99, 235, 0.7), inset 0 1.5px 2px rgba(255, 255, 255, 0.85) !important;
 }
 
 .trip-search-action-btn:hover::after {
@@ -600,7 +643,7 @@
 }
 
 .trip-search-action-btn:active {
-  transform: translateY(0) scale(0.98) !important;
+  transform: translateY(0) scale(0.96) !important;
 }
 
 .trip-search-bottom-strip {
@@ -643,51 +686,52 @@
 
 .promo-deal-card {
   position: relative !important;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.88) 100%) !important;
-  backdrop-filter: blur(16px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
-  border-radius: 16px !important;
-  padding: 18px !important;
+  background: rgba(255, 255, 255, 0.72) !important;
+  backdrop-filter: blur(28px) saturate(210%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(210%) !important;
+  border-radius: 20px !important;
+  padding: 20px !important;
   color: #0f172a !important;
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.95) !important;
-  border: 1px solid rgba(255, 255, 255, 0.85) !important;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.08), inset 0 1.5px 1.5px rgba(255, 255, 255, 1) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.9) !important;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
   overflow: hidden !important;
 }
 
 [data-theme="dark"] .promo-deal-card {
-  background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.85) 100%) !important;
-  border-color: rgba(255, 255, 255, 0.1) !important;
-  box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.08) !important;
+  background: rgba(30, 41, 59, 0.75) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 14px 35px -5px rgba(0, 0, 0, 0.5), inset 0 1.5px 1.5px rgba(255, 255, 255, 0.08) !important;
   color: #f8fafc !important;
 }
 
 .promo-deal-card:hover {
-  transform: translateY(-8px) scale(1.02) !important;
-  box-shadow: 0 20px 40px -8px rgba(37, 99, 235, 0.25), inset 0 1px 2px rgba(255, 255, 255, 1) !important;
-  border-color: rgba(59, 130, 246, 0.45) !important;
+  transform: translateY(-10px) scale(1.025) !important;
+  box-shadow: 0 25px 50px -10px rgba(37, 99, 235, 0.3), inset 0 1.5px 2px rgba(255, 255, 255, 1) !important;
+  border-color: rgba(56, 189, 248, 0.6) !important;
 }
 
 [data-theme="dark"] .promo-deal-card:hover {
-  border-color: rgba(59, 130, 246, 0.5) !important;
-  box-shadow: 0 20px 40px -8px rgba(0, 0, 0, 0.6), 0 0 20px rgba(59, 130, 246, 0.2) !important;
+  border-color: rgba(56, 189, 248, 0.65) !important;
+  box-shadow: 0 25px 55px -8px rgba(0, 0, 0, 0.75), 0 0 25px rgba(56, 189, 248, 0.25) !important;
 }
 
 .deal-discount {
   display: inline-block !important;
   align-self: flex-start !important;
-  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%) !important;
-  color: #dc2626 !important;
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(244, 63, 94, 0.22) 100%) !important;
+  backdrop-filter: blur(8px) !important;
+  color: #ef4444 !important;
   font-weight: 800 !important;
   font-size: 0.82rem !important;
-  padding: 4px 12px !important;
-  border-radius: 20px !important;
-  margin-bottom: 10px !important;
-  border: 1px solid rgba(220, 38, 38, 0.2) !important;
-  box-shadow: 0 2px 6px rgba(220, 38, 38, 0.1) !important;
+  padding: 5px 14px !important;
+  border-radius: 30px !important;
+  margin-bottom: 12px !important;
+  border: 1px solid rgba(239, 68, 68, 0.3) !important;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.15) !important;
 }
 
 .deal-info h4 {
@@ -1412,12 +1456,13 @@
 }
 
 /* ==========================================================================
-   DARK MODE ADJUSTMENTS
+   DARK MODE ADJUSTMENTS - LIQUID GLASS TRANSLUCENCY
    ========================================================================== */
 
 [data-theme="dark"] .trip-sidebar {
-  background: #111827 !important;
-  border-right-color: #1f2937 !important;
+  background: rgba(15, 23, 42, 0.68) !important;
+  border-right-color: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(28px) saturate(200%) !important;
 }
 
 [data-theme="dark"] .trip-nav-btn {
@@ -1427,11 +1472,14 @@
 [data-theme="dark"] .trip-nav-btn:hover {
   background: rgba(59, 130, 246, 0.15) !important;
   color: #60a5fa !important;
+  border-color: rgba(59, 130, 246, 0.3) !important;
 }
 
 [data-theme="dark"] .trip-nav-btn.active {
-  background: rgba(59, 130, 246, 0.2) !important;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.25) 0%, rgba(37, 99, 235, 0.15) 100%) !important;
   color: #60a5fa !important;
+  border-color: rgba(96, 165, 250, 0.4) !important;
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.15) !important;
 }
 
 [data-theme="dark"] .header-text-link {
@@ -1440,6 +1488,7 @@
 
 [data-theme="dark"] .header-text-link:hover {
   background: rgba(255, 255, 255, 0.08) !important;
+  color: #60a5fa !important;
 }
 
 [data-theme="dark"] .currency-trigger-btn {
@@ -1495,40 +1544,47 @@
   }
 }
 
-
-/* Theme Toggle Button */
+/* Theme Toggle Button - Liquid Glass Orb */
 .theme-toggle-btn {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  width: 38px !important;
-  height: 38px !important;
+  width: 40px !important;
+  height: 40px !important;
   border-radius: 50% !important;
-  background: rgba(0, 0, 0, 0.05) !important;
-  border: 1px solid var(--border-color, #e2e8f0) !important;
+  background: rgba(255, 255, 255, 0.65) !important;
+  backdrop-filter: blur(16px) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.8) !important;
   cursor: pointer !important;
-  transition: all 0.2s ease !important;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
   padding: 0 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05), inset 0 1px 1px rgba(255, 255, 255, 0.9) !important;
 }
 
 .theme-toggle-btn:hover {
-  background: rgba(0, 0, 0, 0.1) !important;
-  transform: scale(1.08) !important;
+  background: rgba(37, 99, 235, 0.12) !important;
+  border-color: rgba(56, 189, 248, 0.5) !important;
+  transform: scale(1.12) rotate(12deg) !important;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.2), inset 0 1px 1.5px rgba(255, 255, 255, 1) !important;
 }
 
 [data-theme="dark"] .theme-toggle-btn {
-  background: rgba(255, 255, 255, 0.08) !important;
-  border-color: #334155 !important;
+  background: rgba(30, 41, 59, 0.65) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.1) !important;
 }
 
 [data-theme="dark"] .theme-toggle-btn:hover {
-  background: rgba(255, 255, 255, 0.15) !important;
+  background: rgba(59, 130, 246, 0.25) !important;
+  border-color: rgba(96, 165, 250, 0.4) !important;
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.35), inset 0 1px 1.5px rgba(255, 255, 255, 0.2) !important;
 }
 
 /* ==========================================================================
-   GLOSSY EFFECTS & FLUID ANIMATIONS SYSTEM
+   LIQUID GLASS CARDS & FLUID ANIMATION SYSTEM
    ========================================================================== */
 
+/* Keyframe Physics */
 @keyframes floatSlow {
   0% {
     transform: translateY(0) rotate(0deg);
@@ -1550,10 +1606,14 @@
   }
 }
 
-@keyframes glossyModalEnter {
+@keyframes liquidModalPop {
   0% {
     opacity: 0;
-    transform: scale(0.93) translateY(18px);
+    transform: scale(0.9) translateY(24px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.02) translateY(-4px);
   }
   100% {
     opacity: 1;
@@ -1561,112 +1621,195 @@
   }
 }
 
-@keyframes pulseGlow {
+@keyframes liquidPulseGlow {
   0%, 100% {
-    box-shadow: 0 0 15px rgba(37, 99, 235, 0.35);
+    box-shadow: 0 0 16px rgba(56, 189, 248, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.85);
   }
   50% {
-    box-shadow: 0 0 25px rgba(37, 99, 235, 0.6);
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.75), inset 0 1px 1px rgba(255, 255, 255, 1);
   }
 }
 
-/* Glossy Cards (Tours, Hotels, Places) */
+@keyframes liquidWave {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Liquid Glass Cards (Tours, Hotels, Places) */
 .tour-card,
 .hotel-card,
 .place-card {
   position: relative !important;
-  border-radius: 18px !important;
-  background: var(--bg-secondary, #ffffff) !important;
-  border: 1px solid rgba(255, 255, 255, 0.8) !important;
-  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.9) !important;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease !important;
+  border-radius: 22px !important;
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(28px) saturate(210%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(210%) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 12px 30px -6px rgba(15, 23, 42, 0.08), inset 0 1.5px 1.5px rgba(255, 255, 255, 1) !important;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.3s ease !important;
   overflow: hidden !important;
 }
 
 [data-theme="dark"] .tour-card,
 [data-theme="dark"] .hotel-card,
 [data-theme="dark"] .place-card {
-  background: rgba(21, 25, 35, 0.85) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.06) !important;
+  background: rgba(17, 24, 39, 0.78) !important;
+  backdrop-filter: blur(28px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(200%) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 14px 35px -6px rgba(0, 0, 0, 0.55), inset 0 1.5px 1.5px rgba(255, 255, 255, 0.08) !important;
 }
 
 .tour-card:hover,
 .hotel-card:hover,
 .place-card:hover {
-  transform: translateY(-8px) scale(1.01) !important;
-  box-shadow: 0 24px 50px -10px rgba(37, 99, 235, 0.2), inset 0 1px 2px rgba(255, 255, 255, 1) !important;
-  border-color: rgba(59, 130, 246, 0.4) !important;
+  transform: translateY(-10px) scale(1.02) !important;
+  box-shadow: 0 28px 60px -10px rgba(37, 99, 235, 0.25), inset 0 1.5px 2px rgba(255, 255, 255, 1) !important;
+  border-color: rgba(56, 189, 248, 0.6) !important;
 }
 
 [data-theme="dark"] .tour-card:hover,
 [data-theme="dark"] .hotel-card:hover,
 [data-theme="dark"] .place-card:hover {
-  box-shadow: 0 25px 55px -10px rgba(0, 0, 0, 0.75), 0 0 20px rgba(59, 130, 246, 0.2) !important;
-  border-color: rgba(59, 130, 246, 0.4) !important;
+  box-shadow: 0 30px 65px -10px rgba(0, 0, 0, 0.8), 0 0 25px rgba(56, 189, 248, 0.25) !important;
+  border-color: rgba(56, 189, 248, 0.55) !important;
 }
 
-/* Glossy Floating Badges */
+/* Water Droplet Floating Badges */
 .tour-category-tag,
 .hotel-stars-tag,
 .place-category-badge {
   background: rgba(255, 255, 255, 0.85) !important;
-  backdrop-filter: blur(10px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(10px) saturate(180%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.9) !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+  backdrop-filter: blur(14px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(190%) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08), inset 0 1px 1px rgba(255, 255, 255, 1) !important;
   border-radius: 30px !important;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
 }
 
 [data-theme="dark"] .tour-category-tag,
 [data-theme="dark"] .hotel-stars-tag,
 [data-theme="dark"] .place-category-badge {
-  background: rgba(15, 23, 42, 0.8) !important;
+  background: rgba(15, 23, 42, 0.85) !important;
   border-color: rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.1) !important;
   color: #f8fafc !important;
 }
 
-/* Glossy Modals */
-.trip-modal-backdrop {
-  backdrop-filter: blur(14px) saturate(160%) !important;
-  -webkit-backdrop-filter: blur(14px) saturate(160%) !important;
-  background: rgba(15, 23, 42, 0.65) !important;
+/* Liquid Glass Modals (VisionOS Floating Panels) */
+.trip-modal-backdrop,
+.modal-backdrop,
+.google-modal-backdrop {
+  backdrop-filter: blur(18px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(180%) !important;
+  background: rgba(15, 23, 42, 0.6) !important;
   animation: fadeIn 0.25s ease forwards !important;
 }
 
 .trip-modal-card,
-.ticket-modal-card {
-  animation: glossyModalEnter 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
-  border: 1px solid rgba(255, 255, 255, 0.6) !important;
-  box-shadow: 0 35px 80px -15px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.8) !important;
+.ticket-modal-card,
+.login-glass-box,
+.auth-card,
+.whatsapp-auth-card,
+.google-auth-card {
+  animation: liquidModalPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important;
+  background: rgba(255, 255, 255, 0.82) !important;
+  backdrop-filter: blur(36px) saturate(220%) !important;
+  -webkit-backdrop-filter: blur(36px) saturate(220%) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
+  border-radius: 26px !important;
+  box-shadow: 0 35px 85px -15px rgba(0, 0, 0, 0.35), inset 0 1.5px 2px rgba(255, 255, 255, 1) !important;
+  overflow: hidden !important;
 }
 
 [data-theme="dark"] .trip-modal-card,
-[data-theme="dark"] .ticket-modal-card {
-  border-color: rgba(255, 255, 255, 0.12) !important;
-  box-shadow: 0 35px 80px -15px rgba(0, 0, 0, 0.8), inset 0 1px 1px rgba(255, 255, 255, 0.08) !important;
+[data-theme="dark"] .ticket-modal-card,
+[data-theme="dark"] .login-glass-box,
+[data-theme="dark"] .auth-card,
+[data-theme="dark"] .whatsapp-auth-card,
+[data-theme="dark"] .google-auth-card {
+  background: rgba(15, 23, 42, 0.85) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 35px 85px -15px rgba(0, 0, 0, 0.85), inset 0 1.5px 2px rgba(255, 255, 255, 0.1) !important;
 }
 
-/* Primary and Action Buttons Gloss */
+/* Liquid Primary & Action Buttons with Organic Gel Sheen */
 .btn-primary,
 .login-submit-btn,
 .view-ticket-action-btn {
   position: relative !important;
   overflow: hidden !important;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  border-radius: 14px !important;
+  background: linear-gradient(135deg, #00df89 0%, #00b368 100%) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.45) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 10px 25px -4px rgba(0, 223, 137, 0.45), inset 0 1.5px 1.5px rgba(255, 255, 255, 0.65) !important;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  cursor: pointer !important;
+}
+
+.btn-primary::after,
+.login-submit-btn::after,
+.view-ticket-action-btn::after {
+  content: "" !important;
+  position: absolute !important;
+  top: -50% !important;
+  left: -75% !important;
+  width: 50% !important;
+  height: 200% !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent) !important;
+  transform: rotate(25deg) !important;
+  transition: all 0.75s ease !important;
 }
 
 .btn-primary:hover,
 .login-submit-btn:hover,
 .view-ticket-action-btn:hover {
-  transform: translateY(-2px) scale(1.02) !important;
-  box-shadow: 0 8px 24px -2px rgba(4, 169, 125, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.5) !important;
+  transform: translateY(-3px) scale(1.025) !important;
+  box-shadow: 0 16px 36px -4px rgba(0, 223, 137, 0.65), inset 0 1.5px 2px rgba(255, 255, 255, 0.85) !important;
+}
+
+.btn-primary:hover::after,
+.login-submit-btn:hover::after,
+.view-ticket-action-btn:hover::after {
+  left: 130% !important;
 }
 
 .btn-primary:active,
 .login-submit-btn:active,
 .view-ticket-action-btn:active {
-  transform: translateY(0) scale(0.98) !important;
+  transform: translateY(0) scale(0.96) !important;
+}
+
+/* Glass Pods for Login & Auth Inputs */
+.login-input-group,
+.auth-input-group {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04), inset 0 1px 1px rgba(255, 255, 255, 0.9) !important;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.login-input-group:focus-within,
+.auth-input-group:focus-within {
+  border-color: #00df89 !important;
+  box-shadow: 0 0 0 3.5px rgba(0, 223, 137, 0.25), 0 8px 20px rgba(0, 223, 137, 0.15) !important;
+  transform: translateY(-2px) !important;
+}
+
+[data-theme="dark"] .login-input-group,
+[data-theme="dark"] .auth-input-group {
+  background: rgba(30, 41, 59, 0.75) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
 }
