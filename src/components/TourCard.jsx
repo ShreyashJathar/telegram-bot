@@ -1,4 +1,5 @@
 import React from "react";
+import { useCurrency } from "../context/CurrencyContext";
 
 export default function TourCard({ 
   tour, 
@@ -8,6 +9,8 @@ export default function TourCard({
   currentUser,
   onEditTour
 }) {
+  const { formatPrice } = useCurrency();
+
   const handleWishlistClick = (e) => {
     e.stopPropagation();
     onToggleWishlist(tour.id);
@@ -85,7 +88,7 @@ export default function TourCard({
 
           <div className="card-price-section">
             <span className="price-label">From</span>
-            <span className="price-amount">₹{tour.price.toLocaleString("en-IN")}</span>
+            <span className="price-amount">{formatPrice(tour.price)}</span>
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ import {
 } from "../firebase";
 import { getBackendBaseUrl } from "../services/api";
 
-export default function LoginPage({ onLoginSuccess }) {
+export default function LoginPage({ onLoginSuccess, onBack }) {
   const [mode, setMode] = useState("signin"); // "signin", "signup", "forgot"
   
   // Google & Gmail OTP Auth Modal State
@@ -610,6 +610,20 @@ export default function LoginPage({ onLoginSuccess }) {
   return (
     <div className="login-page-container animate-fade">
       <div className="login-glass-box glassmorphic">
+        {onBack && (
+          <button 
+            type="button" 
+            className="login-back-pill" 
+            onClick={onBack}
+            title="Return to Safar Portal"
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            <span>Back to Explorer</span>
+          </button>
+        )}
         
         {/* SIGN IN MODE */}
         {mode === "signin" && (

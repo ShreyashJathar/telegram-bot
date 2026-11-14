@@ -1,4 +1,5 @@
 import React from "react";
+import { useCurrency } from "../context/CurrencyContext";
 
 export default function HotelCard({ 
   hotel, 
@@ -8,6 +9,8 @@ export default function HotelCard({
   currentUser,
   onEditHotel
 }) {
+  const { formatPrice } = useCurrency();
+
   const handleWishlistClick = (e) => {
     e.stopPropagation();
     onToggleWishlist(hotel.id);
@@ -87,7 +90,7 @@ export default function HotelCard({
           </div>
 
           <div className="card-price-section">
-            <span className="price-amount">₹{hotel.price.toLocaleString("en-IN")}</span>
+            <span className="price-amount">{formatPrice(hotel.price)}</span>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { useCurrency } from "../context/CurrencyContext";
 
 export default function PlaceCard({ 
   place, 
@@ -8,6 +9,7 @@ export default function PlaceCard({
   currentUser,
   onEditPlace
 }) {
+  const { formatPrice } = useCurrency();
   return (
     <div className="card place-card hover-lift">
       <div className="card-image-container">
@@ -81,7 +83,7 @@ export default function PlaceCard({
         <div className="card-footer">
           <div className="price-tag">
             <span className="price-prefix">Ticket from</span>
-            <span className="price-amount">${place.ticketPrice}</span>
+            <span className="price-amount">{formatPrice(place.ticketPrice)}</span>
             <span className="price-suffix">/ person</span>
           </div>
 

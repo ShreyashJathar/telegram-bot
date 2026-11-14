@@ -852,7 +852,10 @@ export default function App() {
           {currentView === "error-401" && render401Page()}
           {currentView === "error-404" && render404Page()}
           {currentView === "login" && (
-            <LoginPage onLoginSuccess={handleLoginSuccess} />
+            <LoginPage 
+              onLoginSuccess={handleLoginSuccess} 
+              onBack={() => setCurrentView("explore-hotels")}
+            />
           )}
         </main>
 

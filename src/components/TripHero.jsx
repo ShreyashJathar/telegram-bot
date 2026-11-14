@@ -54,13 +54,24 @@ export default function TripHero({
   return (
     <section className="trip-hero-section">
       <div className="trip-hero-banner">
-        <h1 className="trip-hero-headline">Every check-in is a new beginning</h1>
+        <div className="hero-badge-wrap">
+          <span className="hero-tagline-badge">
+            <span className="badge-spark">✨</span> Curated Luxury Stays & Worldwide Expeditions
+          </span>
+        </div>
+        <h1 className="trip-hero-headline">Every Check-In is a New Adventure</h1>
+        <p className="trip-hero-subheading">
+          Handcrafted 5-star villas, serene alpine chalets, seamless flights, and bespoke guided tours worldwide.
+        </p>
+
         <div className="trip-guarantee-ribbon">
-          <span><strong style={{ color: "#00df89" }}>✓</strong> We price match</span>
+          <span className="guarantee-pill"><strong style={{ color: "#00df89" }}>✓</strong> Best Price Match</span>
           <span className="divider">•</span>
-          <span>📅 Hotel booking guarantee</span>
+          <span className="guarantee-pill">📅 Free Reschedule Guarantee</span>
           <span className="divider">•</span>
-          <span>💳 Verified stay guarantee</span>
+          <span className="guarantee-pill">💳 Verified Luxury Stay</span>
+          <span className="divider">•</span>
+          <span className="guarantee-pill">⚡ 24/7 VIP Concierge</span>
         </div>
 
         {/* White Trip.com Floating Search Console */}
@@ -256,6 +267,34 @@ export default function TripHero({
                 ⭐ Welcome back, <strong>{currentUser.fullName || "Traveler"}</strong>! VIP Member savings active on all bookings.
               </span>
             )}
+          </div>
+        </div>
+
+        {/* Quick Trending Exploration Chips */}
+        <div className="hero-quick-filter-strip">
+          <span className="quick-filter-title">Popular Escapes:</span>
+          <div className="quick-filter-chips">
+            {[
+              { label: "🏖️ Beachfront Resorts", val: "Beach" },
+              { label: "🏔️ Alpine Chalets", val: "Nature" },
+              { label: "🏰 Royal Heritage", val: "Cultural" },
+              { label: "🏕️ Wilderness Safaris", val: "Adventure" },
+              { label: "⭐ Ultra Luxury Villas", val: "Luxury" }
+            ].map((chip) => (
+              <button
+                key={chip.val}
+                type="button"
+                className={`quick-filter-chip ${selectedCategory === chip.val ? "active" : ""}`}
+                onClick={() => {
+                  if (setSelectedCategory) setSelectedCategory(chip.val);
+                  if (setSearchQuery) setSearchQuery("");
+                  const el = document.getElementById("main-travel-inventory");
+                  if (el) el.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                {chip.label}
+              </button>
+            ))}
           </div>
         </div>
 
